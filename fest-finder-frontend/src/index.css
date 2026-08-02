@@ -1,0 +1,68 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@import 'leaflet/dist/leaflet.css';
+
+:root {
+  --bg: 15 23 42;
+  --surface: 22 32 56;
+  --elevated: 30 41 66;
+  --line: 51 65 94;
+  --ink: 241 245 249;
+  --muted: 148 163 184;
+  color-scheme: dark;
+}
+html.light {
+  --bg: 248 250 252;
+  --surface: 255 255 255;
+  --elevated: 241 245 249;
+  --line: 226 232 240;
+  --ink: 15 23 42;
+  --muted: 100 116 139;
+  color-scheme: light;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--ink));
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  transition-property: background-color, border-color, color, box-shadow, opacity, transform;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--line));
+  border-radius: 999px;
+}
+:focus-visible {
+  outline: 2px solid #a47cf1;
+  outline-offset: 2px;
+}
+.glass {
+  background: linear-gradient(180deg, rgb(var(--surface) / 0.85), rgb(var(--surface) / 0.6));
+  backdrop-filter: blur(14px);
+  border: 1px solid rgb(var(--line) / 0.7);
+}
+.leaflet-container {
+  background: rgb(var(--elevated));
+  border-radius: 16px;
+  font-family: 'Inter', sans-serif;
+}
