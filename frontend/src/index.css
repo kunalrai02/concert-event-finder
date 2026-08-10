@@ -1,0 +1,77 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@300..700&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@import 'leaflet/dist/leaflet.css';
+
+:root {
+  --primary: 242 55 161; /* #F237A1 */
+  --secondary: 44 64 167; /* #2C40A7 */
+  --success: 22 163 74; /* #16A34A */
+  --warning: 217 119 6; /* #D97706 */
+  --danger: 220 38 38; /* #DC2626 */
+  --surface: 255 255 255; /* #FFFFFF */
+  --bg: 253 251 247; /* Warm off-white #FDFBF7 */
+  --text: 17 24 39; /* #111827 */
+  
+  --line: 44 64 167; /* Secondary #2C40A7 used for borders */
+  color-scheme: light;
+}
+html.light, html.dark {
+  /* Riso is exclusively a print aesthetic */
+  --primary: 242 55 161; 
+  --secondary: 44 64 167; 
+  --success: 22 163 74; 
+  --warning: 217 119 6; 
+  --danger: 220 38 38; 
+  --surface: 255 255 255; 
+  --bg: 253 251 247; 
+  --text: 17 24 39; 
+  --line: 44 64 167; 
+  color-scheme: light;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--text));
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  transition-property: background-color, border-color, color, box-shadow, opacity, transform;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--line));
+  border-radius: 999px;
+}
+:focus-visible {
+  outline: 2px solid rgb(var(--primary));
+  outline-offset: 2px;
+}
+.glass {
+  background: rgb(var(--surface));
+  border: 1px solid rgb(var(--line) / 0.1);
+  border-radius: 0.75rem;
+}
+.leaflet-container {
+  background: rgb(var(--surface));
+  border: 1px solid rgb(var(--line) / 0.1);
+  border-radius: 0.75rem;
+  font-family: 'Space Grotesk', sans-serif;
+}

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "spacious": {
+      "source": "bergside/awesome-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/spacious/SKILL.md",
+      "computedHash": "5fee2e3cff9ebc7295db6a9e8940768bf2ef2f532993177296aadbe1d0c96769"
+    }
+  }
+}
