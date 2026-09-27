@@ -10,3 +10,16 @@ backend/implementation_plan.md
 # Synopsis files
 EventSphere_Synopsis_MCSP232_v1.3.docx
 EventSphere_Synopsis_MCSP232_v1.3_preview.pdf
+
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+logs/
+# Node
+node_modules/
+dist/
+# Secrets and uploads
+.env
+media/
